@@ -1,3 +1,5 @@
 <h1 align="center"> LEVITADOR MAGNÉTICO </h1>
 
-Este proyecto fue desarrollado para
+<h3> Nuestro proyecto, un levitador magnético por repulsión es un dispositivo que utiliza la fuerza de campos magnéticos para suspender un objeto en el aire sin contacto físico. En este utilizamos los principios de electromagnetismo y corrientes eléctricas, PWM (Pulse Width Modulation/Modulación por Ancho de Pulso) y PID (Proporcional-Integral-Derivativo) como un sistema de control para regular constantemente la tensión media inducida en un electroimán en tiempo real y un circuito de potencia que nos permite tener la suficiente alimentación para el bobinado. </h3>
+
+En este repositorio de Github se encuentran documentación, archivos del firimware, hardware y del sitio web.
