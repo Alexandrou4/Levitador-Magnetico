@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control Aéreo Magnético</title>
+    <link rel="icon" type="image/jpg" href="Imagenes/Albaca.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head> 
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-plane" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+            <h3>Control Magnético</h3>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#" data-page="about"><i class="fas fa-users"></i> Nosotros</a></li>
+            <li><a href="#" data-page="docs"><i class="fas fa-file-alt"></i> Documentación</a></li>
+            <li><a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <h1>Sistema de Control Aéreo Magnético</h1>
+                <p>Tecnología de estabilización avanzada</p>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Home Page -->
+            <div class="page active" id="home">
+                <div class="simulator-wrapper">
+                   
+                    <div class="simulator-container">
+                    
+                        <div class="airplane-container">
+                            <div class="airplane" id="airplane">
+                                <div class="airplane-body"></div>
+                                <div class="airplane-wings"></div>
+                                <div class="airplane-tail"></div>
+                            </div>
+                        </div>
+
+                        <div class="sensor-beam" id="beam-nose" style="height: 2px; width: 125px; left: 50%; top: 47.5%; transform: translate(-50%, -50%) rotate(0deg);">
+                            <div class="sensor-label" id="label-nose">Nariz: 125mm</div>
+                        </div>
+                        <div class="sensor-beam" id="beam-center" style="height: 105px; width: 2px; left: 50%; top: 47.5%; transform: translate(-50%, -50%) rotate(0deg);">
+                            <div class="sensor-label" id="label-center">Eje central: 105mm</div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="distance-nose">Sensor Nariz (mm): <span id="distance-nose-value">125</span></label>
+                            <input type="range" class="slider" id="distance-nose" min="50" max="200" value="125" step="1">
+                        </div> <br/>
+                    
+                        <div class="control-group">
+                            <label for="distance-center">Sensor Eje Central (mm): <span id="distance-center-value">105</span></label>
+                            <input type="range" class="slider" id="distance-center" min="30" max="180" value="105" step="1">
+                        </div>
+                    </div>  <br/>
+                </div> 
+
+                <div class="dashboard">
+                    <div class="card">
+                        <h3>Principio de Funcionamiento</h3>
+                        <p>El sistema utiliza dos sensores magnéticos para detectar la distancia a una superficie magnética. Cuando los sensores detectan diferencias, el sistema ajusta automáticamente la inclinación del avión para mantener la estabilidad.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Configuración de Sensores</h3>
+                        <p>Los controles deslizantes permiten simular diferentes condiciones de vuelo. El sensor de la nariz controla la inclinación frontal (pitch), mientras que el sensor del eje central controla el balanceo (roll).</p>
+                    </div>
+                    <div class="card">
+                        <h3>Parámetros Técnicos</h3>
+                        <p>Rango de detección: 30-200mm. Precisión: ±1mm. Tiempo de respuesta: 50ms. Frecuencia de muestreo: 100Hz. Temperatura operativa: -20°C a 60°C.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Page -->
+            <div class="page" id="about">
+                <h2>Nuestro Equipo</h2>
+                <p>Conoce al equipo detrás del desarrollo de esta tecnología innovadora.</p>
+                
+                <div class="team">
+                    <div class="team-member">
+                        <img src="Imagenes/ALEEEEE.jpg" alt="Alejandro Villegas Gonzalez" class="member-photo">
+                        <h3 class="member-name">Alejandro Villegas González</h3>
+                        <p class="member-role">Programador Web</p>
+                        <p>Especialista en sistemas de diseño web con experiencia en lenguajes HTML y CSS.</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/elverdaderoimpostor/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:alejandrovillegasgonzalez@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="Imagenes/mate.jpg" alt="Mateo Keller" class="member-photo">
+                        <h3 class="member-name">Mateo Keller</h3>
+                        <p class="member-role">Ingeniero de Hardware</p>
+                        <p>Encargado del montaje físico de la estructura del proyecto (base, soporte, electroimanes)</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/mate.k_m/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:mateokeller@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="Imagenes/santi.jpg" alt="Santiago González Camiscia" class="member-photo">
+                        <h3 class="member-name">Santiago González Camiscia</h3>
+                        <p class="member-role">Ingeniero de Software</p>
+                        <p>Desarrollador de los algoritmos de control y estabilización del sistema.</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/santigc__/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:santiagogonzalezcamiscia@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="Imagenes/ren.jpg" alt="Renzo Erbino" class="member-photo">
+                        <h3 class="member-name">Renzo Erbino</h3>
+                        <p class="member-role">Director de investigación y programador</p>
+                        <p>Responsable de coodinar al equipo y colaborar con el diseño de la página web y algoritmos de control y estabilización del sistema.</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/renzoerbino/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:renzoerbino@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="Imagenes/mati.jpg" alt="Matías González Paurailly" class="member-photo">
+                        <h3 class="member-name">Matías González Paurailly</h3>
+                        <p class="member-role">Especialista en software</p>
+                        <p>Programación del microcontrolador para la regulación del campo magnético. Implementación de lectura de sensores y lógica de control.</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/elmatute777/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:matiasgonzalezpaurailly@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="Imagenes/juli.jpg" alt="Julian Romero" class="member-photo">
+                        <h3 class="member-name">Julian Romero</h3>
+                        <p class="member-role">Diseñador e investigador</p>
+                        <p>Diseño y simulación del circuito e investigación de los principios físicos de la levitación magnética.</p>
+                        <div class="member-social">
+                            <a href="https://www.instagram.com/ju__romero_/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:julianromero@impatrq.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Page -->
+            <div class="page" id="docs">
+                <h2>Documentación Técnica</h2> <br/>
+                <div class="card">
+                    <h3>Manual de Usuario</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                </div>  <br/>
+                <div class="card">
+                    <h3>Especificaciones Técnicas</h3>
+                    <img src="Imagenes/Bobinado.jpg" alt="Bobinado" class="card-image"> <br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                </div>  <br/>
+                <div class="card">
+                    <h3>Guía de Instalación</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                </div>  <br/>
+            </div>
+
+            <!-- Contact Page -->
+            <div class="page" id="contact">
+                <h2>Contacto</h2> <br/>
+                <div class="card">
+                    <h3>Información de Contacto</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                    <p>Email: info@empresa.com</p>
+                    <p>Teléfono: +1 234 567 890</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Sistema de Control de Estabilización Magnética | © 2025 Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation between pages
+            const menuLinks = document.querySelectorAll('.sidebar-menu a');
+            const pages = document.querySelectorAll('.page');
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links and pages
+                    menuLinks.forEach(l => l.classList.remove('active'));
+                    pages.forEach(p => p.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Show corresponding page
+                    const pageId = this.getAttribute('data-page');
+                    document.getElementById(pageId).classList.add('active');
+                });
+            });
+            
+            // Get DOM elements for simulator
+            const noseSlider = document.getElementById('distance-nose');
+            const centerSlider = document.getElementById('distance-center');
+            
+            const noseValue = document.getElementById('distance-nose-value');
+            const centerValue = document.getElementById('distance-center-value');
+            
+            const beamNose = document.getElementById('beam-nose');
+            const beamCenter = document.getElementById('beam-center');
+            
+            const labelNose = document.getElementById('label-nose');
+            const labelCenter = document.getElementById('label-center');
+            
+            const airplane = document.getElementById('airplane');
+
+            // Update beams and airplane position when sliders change
+            noseSlider.addEventListener('input', function() {
+                const value = this.value;
+                noseValue.textContent = value;
+                beamNose.style.width = `${value}px`;
+                labelNose.textContent = `Nariz: ${value}mm`;
+                updateAirplanePosition();
+            });
+
+            centerSlider.addEventListener('input', function() {
+                const value = this.value;
+                centerValue.textContent = value;
+                beamCenter.style.height = `${value}px`;
+                labelCenter.textContent = `Eje central: ${value}mm`;
+                updateAirplanePosition();
+            });
+
+            // Calculate and update airplane position based on sensor differences
+            function updateAirplanePosition() {
+                const noseDist = parseInt(noseSlider.value);
+                const centerDist = parseInt(centerSlider.value);
+                
+                // Calculate pitch (inclinación frontal) based on nose distance (0-200mm maps to -20deg to +20deg)
+                const pitchAngle = ((noseDist - 50) / 150 * 40) - 20;
+                
+                // Calculate roll (inclinación lateral) based on center distance (30-180mm maps to -30deg to +30deg)
+                const rollAngle = ((centerDist - 30) / 150 * 60) - 30;
+                
+                // Apply the transformation
+                airplane.style.transform = `rotateX(${pitchAngle}deg) rotateY(${-rollAngle}deg)`;
+                
+                // Visual feedback
+                if (Math.abs(rollAngle) > 10 || Math.abs(pitchAngle) > 10) {
+                    airplane.style.filter = 'drop-shadow(0 0 5px rgba(255, 0, 110, 0.7))';
+                } else {
+                    airplane.style.filter = 'drop-shadow(0 0 5px rgba(58, 134, 255, 0.7))';
+                }
+            }
+
+            // Initialize positions
+            updateAirplanePosition();
+            
+        });
+        
+
+    </script>
+</body>
+</html>
